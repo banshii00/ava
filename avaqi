@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The more I poofify you the more poof poof poofs you🎀</title>
+    <style>
+        /* Your existing CSS styles */
+        body {
+            background-color: #f8d7da; /* Soft pink background color */
+            font-family: Arial, sans-serif; /* Choose a suitable font */
+            text-align: center; /* Center align the text */
+            padding-top: 400px; /* Adjust vertical padding to center the content */
+            transition: background-color 0.5s; /* Add transition effect for smooth color change */
+        }
+        .container {
+            position: relative; /* Ensure relative positioning for absolute positioning of images */
+            display: flex; /* Use flexbox to align items */
+            flex-direction: column; /* Stack items vertically */
+            align-items: center; /* Center items horizontally */
+            justify-content: center; /* Center items vertically */
+        }
+        .melody-text {
+            font-size: 24px;
+            color: #ff69b4; /* Pink color for the text */
+            text-shadow: 1px 1px 1px #ccc; /* Add a slight shadow to the text */
+            margin-bottom: 10px; /* Adjust margin to properly align text */
+            padding: 10px; /* Add padding around the text */
+            background-color: #fcc2d7; /* Different shade of pink for the background */
+            border-radius: 10px; /* Add rounded corners */
+        }
+
+        #image1 {
+            max-width: 50%; /* Set the maximum width of the images */
+            transition: opacity 2s; /* Add transition effect for smooth animation */
+            opacity: 0; /* Initially hide the image */
+            position: absolute; /* Position image absolutely for stacking */
+            top: -135px; /* Move the first image up */
+            left: 50%; /* Center the first image horizontally */
+            transform: translateX(-50%); /* Adjust position to center */
+        }
+
+        #image2 {
+            max-width: 50%; /* Set the maximum width of the images */
+            transition: opacity 2s; /* Add transition effect for smooth animation */
+            opacity: 0; /* Initially hide the image */
+            position: absolute; /* Position image absolutely for stacking */
+            top: -185px; /* Move the second image down */
+            left: 50%; /* Center the second image horizontally */
+            transform: translateX(-50%); /* Adjust position to center */
+        }
+        #image3 {
+            max-width: 50%; /* Set the maximum width of the images */
+            transition: opacity 2s; /* Add transition effect for smooth animation */
+            opacity: 0; /* Initially hide the image */
+            position: absolute; /* Position image absolutely for stacking */
+            top: -408px; /* Move the second image down */
+            left: 80%; /* Center the second image horizontally */
+            transform: translateX(-50%); /* Adjust position to center */
+        }
+        .button {
+            background-color: #ff69b4; /* Pink background color for the button */
+            color: #000; /* Black text color */
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 20px;
+            position: relative; /* Ensure relative positioning for z-index */
+            z-index: 1; /* Ensure the button appears above the images */
+        }
+        .bottom-text {
+            position: fixed; /* Fixed positioning */
+            bottom: 0; /* Align to the bottom */
+            width: 100%; /* Occupy full width */
+            background-color: #ff69b4; /* Pink background color */
+            color: #000; /* Black text color */
+            text-align: center; /* Center align text */
+            padding: 10px 0; /* Add padding */
+            font-family: Arial, sans-serif; /* Choose a suitable font */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="https://scontent.xx.fbcdn.net/v/t1.15752-9/423903749_925838022117709_2972715369776056563_n.png?_nc_cat=109&ccb=1-7&_nc_sid=510075&_nc_ohc=fLS_zgsYblsAX9vbSFy&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&cb_e2o_trans=t&oh=03_AdQyTXeEiOJOhYZvja_32ifdMqG0DJV9Dw7Ei5nLzAIm9Q&oe=65F7D66A" alt="My Melody Image 1" class="melody-image" id="image1">
+        <img src="https://scontent.xx.fbcdn.net/v/t1.15752-9/423766493_1118114302946908_694853465945271036_n.png?_nc_cat=100&ccb=1-7&_nc_sid=510075&_nc_ohc=z-dkmTYdb_AAX_dA-zG&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&cb_e2o_trans=t&oh=03_AdQwK8e_68lsUop70xBuAC1HbfXa_HAygZ8U5-sLwF1bEQ&oe=65F7F1A6" alt="My Melody Image 2" class="melody-image" id="image2">
+        <img src="https://scontent.xx.fbcdn.net/v/t1.15752-9/423944307_2218282348358033_1449395103874673932_n.png?_nc_cat=101&ccb=1-7&_nc_sid=510075&_nc_ohc=CaVQ345NGGUAX8NOarH&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&cb_e2o_trans=t&oh=03_AdRd50q-SXIgd76NXe4lUW75ihwAO49uD-4MZT4dILZEmw&oe=65F83FD1" alt="My Melody Image 3" class="melody-image" id="image3">
+        <div class="melody-text">The more I poofify you the more poof poof poofs you🎀</div>
+        <button class="button" onclick="startAnimation()">.?🐇</button>
+    </div>
+
+    <div class="bottom-text">
+        for the most beautiful girl in the world (ava)
+    </div>
+
+    <script>
+        function startAnimation() {
+            var image1 = document.getElementById("image1");
+            var image2 = document.getElementById("image2");
+            var image3 = document.getElementById("image3");
+            var button = document.querySelector(".button");
+            
+            // Hide the button
+            button.style.display = "none";
+
+            // Show the first image with animation
+            image1.style.opacity = "1";
+
+            // Remove the first image after 2 seconds
+            setTimeout(function() {
+                image1.style.opacity = "0";
+            }, 2000);
+
+            // Show the second image after 4 seconds
+            setTimeout(function() {
+                image2.style.opacity = "1";
+            }, 4000); // 2 seconds delay after hiding the first image
+
+            // You can add more animations or actions here if needed
+            image3.style.opacity = "1";
+
+            // Change background color slightly
+            document.body.style.backgroundColor = "#f5c6d2"; /* Lighter pink */
+        }
+    </script>
+</body>
+</html>
